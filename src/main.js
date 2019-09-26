@@ -2,8 +2,8 @@ const html = document.querySelector('#html')
 const style = document.querySelector('#style')
 
 const styleStr = `/*
-大家好，我叫刘勇
-接下来由我来画一个太极图
+大家好，
+接下来我会给大家画一个太极图
 首先准备一个div
 */
 #tai-chi {
