@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+main {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  --columns: 2;
+  --gap-constant: 3%;
+}
+
+#html {
+  --width: 1;
+  --gap: calc((var(--columns) - var(--width)) * var(--gap-constant));
+  flex-basis: calc(var(--width) / var(--columns) * 100% - var(--gap));
+  padding: 20px;
+}
+
+.wrapper {
+  --width: 1;
+  --gap: calc((var(--columns) - var(--width)) * var(--gap-constant));
+  flex-basis: calc(var(--width) / var(--columns) * 100% - var(--gap));
+  display: flex;
+  justify-content: center;
+}
+
+#tai-chi {
+  margin-top: 8vh;
+  position: fixed;
+}
+
+#tai-chi::before,
+#tai-chi::after {
+  content: '';
+  display: block;
+  position: absolute;
+}
+
+@media (max-width: 768px) {
+  #html {
+    --width: 2;
+    height: 50vh;
+    overflow: auto;
+  }
+  .wrapper {
+    --width: 2;
+  }
+}
